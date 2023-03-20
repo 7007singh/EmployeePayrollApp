@@ -1,3 +1,6 @@
+.header-content{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
 .headerText-content{
     display: flex;
     flex-direction: column;
@@ -12,9 +15,57 @@
 }
 .logo-content{
     display: flex;
-    align-items: center;
+    margin: 0 auto;
     width: 80%;
 }
 .logo{
     width: 3em;
+}  
+.form-content{
+    min-height: calc(100% - 80px);
+    display: flex;
+    background-color: #f7f7f7;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    width: 65%;
+    padding: 44px 60px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #F5F5F5;
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px #00000029;
+}
+.form-head{
+    font: normal normal bold 28px/37px Roboto;
+    color: #42515F;
+    text-transform: capitalize;
+    text-align: left;
+    padding-bottom: 20px;
+}
+.row-content{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+    align-items: center;
+}
+.label{
+    min-width: 140px;
+}
+lable{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+.text{
+    font-size: 16px;
+    font: normal normal normal 18px/24px Roboto;
+    color: #42515F;
+    opacity: 1;
+}
+.input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
 }
