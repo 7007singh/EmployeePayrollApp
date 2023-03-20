@@ -1,0 +1,20 @@
+.headerText-content{
+    display: flex;
+    flex-direction: column;
+    font: normal normal bold 22px/25px Montserrat;
+    text-transform: uppercase;
+}
+.emp-text{
+    color: #82A70C;
+}
+.payroll-text{
+    color: #42515F;
+}
+.logo-content{
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+.logo{
+    width: 3em;
+}
