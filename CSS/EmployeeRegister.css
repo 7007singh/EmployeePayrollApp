@@ -1,6 +1,7 @@
 /*----UC1----*/
 
-.header-content{
+.header{
+    padding: 15px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
 }
 .headerText-content{
@@ -27,7 +28,6 @@
 /*----UC2----*/
 
 .form-content{
-    min-height: calc(100% - 80px);
     display: flex;
     background-color: #f7f7f7;
     justify-content: center;
@@ -50,8 +50,6 @@
 }
 .row-content{
     display: flex;
-    flex-direction: row;
-    margin-bottom: 0px;
     align-items: center;
 }
 .label{
@@ -63,7 +61,7 @@ lable{
     display: inline-block;
 }
 .text{
-    font-size: 16px;
+    margin-right: 20px;
     font: normal normal normal 18px/24px Roboto;
     color: #42515F;
     opacity: 1;
@@ -82,13 +80,11 @@ lable{
     display: flex;
 }
 .profile-radio-content > label{
-
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 .profile{
     width: 40px;
     border-radius: 50%;
-    margin-left: 12px;
+    margin-right: 20px;
 }

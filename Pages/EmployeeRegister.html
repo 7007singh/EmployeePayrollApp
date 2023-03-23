@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="header-content">
+    <header class="header-content header">
         <div class="logo-content">
             <img src="../assets/logo.png.jpg" class="logo" alt="logo">
             <div class="headerText-content">
@@ -30,27 +30,55 @@
                 <label class="label text" for="profile">Profile image</label>
                 <div class="profile-radio-content">
                     <label>
-                        <input type="radio" id="profille1" name="profile"
-                            value="../assets/profile-images/Ellipse -1.png" required>
-                        <img class="profile" id="image1" src="../assets/profile-images/Ellipse -1.png"
-                            alt="profile-images">
+                        <input type="radio" background-colour="grey" id="profille1" name="profile" value="../assets/profile-images/Ellipse -1.png" required>
+                        <img class="profile" id="image1" src="../assets/profile-images/Ellipse -1.png"alt="profile-images">
                     </label>
                     <label>
-                        <input type="radio" id="profile2" name="profile" value="">
-                        <img class="profile" id="image2" src="../assets/profile-images/Ellipse -2.png"
-                            alt="profile-images">
+                        <input type="radio" id="profile2" name="profile" value="../assets/profile-images/Ellipse -2.png" required>
+                        <img class="profile" id="image2" src="../assets/profile-images/Ellipse -2.png"alt="profile-images">
                     </label>
                     <label>
-                        <input type="radio" id="profile3" name="profile" value="">
-                        <img class="profile" id="image4" src="../assets/profile-images/Ellipse -3.png"
-                            alt="profile-images">
+                        <input type="radio" id="profile3" name="profile" value="../assets/profile-images/Ellipse -3.png" required>
+                        <img class="profile" id="image4" src="../assets/profile-images/Ellipse -3.png"alt="profile-images">
                     </label>
                     <label>
-                        <input type="radio" id="profile4" name="profile" value="">
-                        <img class="profile" id="image4" src="../assets/profile-images/Ellipse -4.png"
-                            alt="profile-images">
+                        <input type="radio" id="profile4" name="profile" value="../assets/profile-images/Ellipse -4.png" required>
+                        <img class="profile" id="image4" src="../assets/profile-images/Ellipse -4.png"alt="profile-images">
                     </label>
                 </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="gender">Gender</label>
+                <div class="profile-radio-content">
+                    <label>
+                        <input type="radio" id="gender" name="gender" value="male">
+                        <label class="text" for="male">Male</label>
+                    </label>
+                    <label>
+                        <input type="radio" id="gender" name="gender" value="female">
+                        <label class="text" for="male">Female</label>
+                    </label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="department">Department</label>
+                <div>
+                    <input type="checkbox" id="hr" name="department" value="HR">
+                    <label class="text" for="hr">HR</label>
+                    <input type="checkbox" id="sales" name="department" value="Sales">
+                    <label class="text" for="sales">Sales</label>
+                    <input type="checkbox" id="finance" name="department" value="Finance">
+                    <label class="text" for="text">Finance</label>
+                    <input type="checkbox" id="engineer" name="department" value="Engineer">
+                    <label class="text" for="engineer">Engineer</label>
+                    <input type="checkbox" id="others" name="department" value="Others">
+                    <label class="text" for="others">Others</label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="salary">Choose your salary: </label>
+                <input title="ChooseSalary" class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="1000" value="400000">
+                <output class="Salary-output text" for="salary">400000</output>
             </div>
         </form>
     </div>
