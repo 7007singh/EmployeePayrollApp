@@ -105,7 +105,6 @@ select{
 /*----UC6----*/
 
 .button-parent{
-
     display: flex;
     margin-bottom: 10px;
     justify-content: space-between;
@@ -113,20 +112,22 @@ select{
 }
 .button{
     font: normal normal normal 20px Roboto;
-    color: #42515F;
-    background: #E2E2E2 0% 0% no-repeat padding-box;
-    padding: 7px 7px;
-    border: 1px solid #969696;
-    border-radius: 4px;
-    font-weight: 400;
+    padding: 7px;
     min-width: 140px;
     cursor: pointer;
 }
 .submit-button{
-    background: #E2E2E2 0% 0% no-repeat padding-box;
     margin-right: 30px;
 }
 #cancle-button{
     text-align: center;
     text-decoration: none;
+}
+
+/*----UC7----*/
+
+.button-ux-design{
+    border-radius: 5px;
+    border: 1px solid #969696;
+    background: #E2E2E2 0% 0% no-repeat padding-box;
 }
