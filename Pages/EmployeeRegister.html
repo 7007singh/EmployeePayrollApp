@@ -24,7 +24,8 @@
             <div class="form-head">employee payroll form</div>
             <div class="row-content">
                 <label class="label text" for="Name">Name</label>
-                <input class="input" type="text" id="Name" Name="Name" placeholder="Your name">
+                <input class="input" type="text" id="name" Name="Name" placeholder="Your name">
+                <error-output class="text-error" for="text"></error-output>
             </div>
             <div class="row-content">
                 <label class="label text" for="profile">Profile image</label>
@@ -78,7 +79,7 @@
             <div class="row-content">
                 <label class="label text" for="salary">Choose your salary: </label>
                 <input title="ChooseSalary" class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="1000" value="400000">
-                <output class="SalaryOutput text" for="salary">400000</output>
+                <output class="salary-output text" for="salary" value="400000">400000</output>
             </div>
             <div class="row-content">
                 <label class="label text" for="start-date">Start Date</label>
@@ -155,7 +156,7 @@
             </div>
         </form>
     </div>
-    <script src="../Js/EmployeeRegister.js"></script>
     <script src="../Js/EmployeePayrollData.js"></script>
+    <script src="../Js/EmployeeRegister.js"></script>
 </body>
 </html>

@@ -28,6 +28,7 @@
 /*----UC2----*/
 
 .form-content{
+    padding: 40px;
     display: flex;
     background-color: #f7f7f7;
     justify-content: center;
@@ -130,4 +131,10 @@ select{
     border-radius: 5px;
     border: 1px solid #969696;
     background: #E2E2E2 0% 0% no-repeat padding-box;
+}
+.text-error{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
 }
