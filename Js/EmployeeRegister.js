@@ -3,16 +3,43 @@ window.addEventListener('DOMContentLoaded', function () {
     const textError = document.querySelector('.text-error');
     name.addEventListener('input', function () {
         if (name.value.length == 0) {
-            setTextValue(textError, "");
+            textError.textContent = "";
             return;
         }
         try {
             (new EmployeePayrollData()).name = name.value;
-            setTextValue(textError, "");
+            textError.textContent = "";
         } catch (e) {
-            setTextValue(textError, e);
+            textError.textContent = e;
         }
     });
+
+    const day = document.querySelector('#day');
+    const month = document.querySelector('#month');
+    const year = document.querySelector('#year');
+    const errorDate = document.querySelector('.date-error');
+    day.addEventListener('input', function() {
+        dateValidation();
+    });
+
+    month.addEventListener('input', function() {
+        dateValidation();
+    });
+
+    year.addEventListener('input', function() {
+        dateValidation();
+    });
+
+    const dateValidation = () => {
+        let date = getInputValueById('#day') + " " + getInputValueById('#month') + " " + getInputValueById('#year');
+        try{
+            (new EmployeePayrollData()).startDate = new Date(date);
+            errorDate.textContent = "";
+        } catch (e) {
+            errorDate.textContent = e;
+        }
+    }
+
     const salary = document.querySelector('#salary');
     const output = document.querySelector('.salary-output');
     output.textContent = salary.value;
@@ -77,6 +104,38 @@ const getSelectedValue = (propertyValue) => {
 }    
 
 const setTextValue = (id, value) => {
+    const element = document.querySelector(id);
+    element.textContent = value;
+}
+
+const resetForm = () => {
+    setValue('#name ','');
+    unsetSelectedValue('[name=profile]');
+    unsetSelectedValue('[name=gender]');
+    unsetSelectedValue('[name=department]');
+    setVlaueByClassName('.text-error','');
+    setVlaueByClassName('.date-error','');
+    setValue('#salary','');
+    setVlaueByClassName('.salary-output','');
+    setValue('#notes','');
+    setValue('#day','1');
+    setValue('#month','January');
+    setValue('#year','2023');
+}
+
+const unsetSelectedValue = (propertyValue) => {
+    let allItem = document.querySelectorAll(propertyValue);
+    allItem.forEach(item => {
+        item.checked = false;
+    });
+}
+
+const setValue = (id, value) => {
+    const element = document.querySelector(id);
+    element.value = value;
+}
+
+const setVlaueByClassName = (id, value) => {
     const element = document.querySelector(id);
     element.textContent = value;
 }

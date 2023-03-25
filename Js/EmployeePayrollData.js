@@ -26,7 +26,14 @@ class EmployeePayrollData {
     set notes(notes) {this._notes = notes;}
 
     get startDate() {return this._startDate;}
-    set startDate(startDate) {this._startDate = startDate;}
+    set startDate(startDate) {
+        let now = new Date();
+        if(startDate > now) throw 'Start date is a future date..!';
+        var diff = Math.abs(now.getTime() - startDate.getTime());
+        if(diff / (1000 * 60 * 60 * 24) > 30)
+        throw 'Start date is beyond 30 days..!';
+        this._startDate = startDate;
+    }
 
     toString(){
         const options = {year: 'numeric', month: 'long', day: 'numeric'};
@@ -35,4 +42,3 @@ class EmployeePayrollData {
         + "', department ='" + this.department + "', salary = '" + this.salary + "', startDate ='" + empDate + this.startDate + "', notes ='" + this.notes + "'";
     }
 }
-
