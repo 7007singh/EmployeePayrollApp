@@ -20,18 +20,18 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form">
+        <form class="form" onsubmit="save()">
             <div class="form-head">employee payroll form</div>
             <div class="row-content">
-                <label class="label text" for="Name">Name</label>
-                <input class="input" type="text" id="name" Name="Name" placeholder="Your name">
+                <label class="label text" for="name">Name</label>
+                <input class="input" type="text" id="name" name="name" placeholder="Your name" required>
                 <error-output class="text-error" for="text"></error-output>
             </div>
             <div class="row-content">
                 <label class="label text" for="profile">Profile image</label>
                 <div class="profile-radio-content">
                     <label>
-                        <input type="radio" background-colour="grey" id="profille1" name="profile" value="../assets/profile-images/Ellipse -1.png" required>
+                        <input type="radio" id="profille1" name="profile" value="../assets/profile-images/Ellipse -1.png" required>
                         <img class="profile" id="image1" src="../assets/profile-images/Ellipse -1.png"alt="profile-images">
                     </label>
                     <label>
@@ -82,9 +82,9 @@
                 <output class="salary-output text" for="salary" value="400000">400000</output>
             </div>
             <div class="row-content">
-                <label class="label text" for="start-date">Start Date</label>
+                <label class="label text" for="startDate">Start date</label>
                 <div id="date">
-                    <select title="chooseDay" id="day" name="Day">
+                    <select title="chooseDay" id="day" name="day">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -117,7 +117,7 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-                    <select id="month" name="Month" >
+                    <select id="month" name="month" >
                         <option value="Jan">January</option>
                         <option value="Feb">February</option>
                         <option value="March">March</option>
@@ -131,7 +131,7 @@
                         <option value="October">October</option>
                         <option value="December">December</option>
                     </select>
-                    <select id="year" name="Year">
+                    <select id="year" name="year">
                         <option value="2023">2023</option>
                         <option value="2022">2022</option>
                         <option value="2021">2021</option>
@@ -145,7 +145,7 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="notes">Notes</label>
-                <textarea class="input" name="Notes" id="notes" placeholder="" style="height: 100px;"></textarea>
+                <textarea class="input" name="notes" id="notes" placeholder="" style="height: 100px;"></textarea>
             </div>
             <div class="button-parent">
                 <a href="" class="button cancleButton button-ux-design" id="cancle-button">Cancle</a>

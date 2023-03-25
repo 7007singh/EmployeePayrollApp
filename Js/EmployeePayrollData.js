@@ -16,11 +16,11 @@ class EmployeePayrollData {
     get gender() {return this._gender;}
     set gender(gender) {this._gender = gender;}
     
-    get department() {return thid.department;}
-    set department(department) {this._department = department}
+    get department() {return this._department;}
+    set department(department) {this._department = department;}
 
     get salary() {return this._salary;}
-    set salary(salary) {this._salary = salary}
+    set salary(salary) {this._salary = salary;}
 
     get notes() {return this._notes;}
     set notes(notes) {this._notes = notes;}
@@ -30,9 +30,9 @@ class EmployeePayrollData {
 
     toString(){
         const options = {year: 'numeric', month: 'long', day: 'numeric'};
-        const empDate = !this.startDate ? "undefined" : this.startDate.toLocalDataString("en-US", options);
-        return "id=" + this.id + ", name = '" + this.name + ", gender ='" + this.gender + ", profilePic ='" + this.profilePic 
-        + ", department ='" + this.department + ",salary = '" + this.salary + ", startDate ='" + this.startDate + ", notes ='" + this.notes;
+        const empDate = !this.startDate ? "undefined" : this.startDate.toLocaleDateString("en-GB", options);
+        return "id=" + this.id + ", name = '" + this.name + "', gender ='" + this.gender + "', profilePic ='" + this.profilePic 
+        + "', department ='" + this.department + "', salary = '" + this.salary + "', startDate ='" + empDate + this.startDate + "', notes ='" + this.notes + "'";
     }
 }
 
