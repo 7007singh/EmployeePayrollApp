@@ -1,0 +1,45 @@
+.detail-text{
+    font: normal normal bold 28px/25px Roboto;
+    color: #42515F;
+}
+
+.count{
+    background-color: #82a70c;
+    color: #ffffff;
+    border-radius: 42%;
+    font-size: 16px;
+    width: 26px;
+    text-align: center;
+    display: inline-block;
+}
+
+.emp-detail{
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+.content{
+    background-color: #f7f7f7;
+    padding: 30px 0px 10px;
+    box-sizing: border-box;
+}
+
+.add-button{
+    font: normal normal normal 22px/29px Roboto;
+    color: #FFFFFF;
+    background: #82A70C 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 18px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.addUser-centre{
+    display: flex;
+    justify-content: space-between;
+}
