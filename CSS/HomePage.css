@@ -1,3 +1,5 @@
+/*----UC15----*/
+
 .detail-text{
     font: normal normal bold 28px/25px Roboto;
     color: #42515F;
@@ -43,3 +45,48 @@
     display: flex;
     justify-content: space-between;
 }
+
+/*----UC16----*/
+
+.table-main{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.table{
+    border-collapse: collapse;
+    width: 100%;
+} 
+
+td, th{
+    text-align: left;
+    padding: 5px 8px;
+}
+
+th{
+    background: #42515F 0% 0% no-repeat padding-box;
+    border-radius: 3px 3px 0px 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.dept-level{
+    background-color: #e9fea5;
+    border-radius: 40px;
+    margin-top: 21px;
+    padding: 1px 7px;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+td img{
+    cursor: pointer;
+}
+
+td img:first-child{
+    margin-right: 10px;
+}
+
+

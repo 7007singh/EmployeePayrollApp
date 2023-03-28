@@ -18,11 +18,48 @@
             </div>
         </div>
     </header>
-    <div class="flex-column content">
+    <div class="content">
         <div class="emp-detail">
             <div class="detail-text">Employee Details <div class="count">10</div></div>
             <a href="../Pages/EmployeeRegister.html" class="add-button addUser-centre flex-row-centre"><img src="../assets/icons/add-24px.svg" alt="PlusMark">Add User</a>
         </div>
     </div>
+    <div class="table-main" id="display">
+        <table class="table">
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Start Date</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td><img class="profile" src="../assets/profile-images/Ellipse -5.png" alt="profilePic"></td>
+                <td>Mohan Roy</td>
+                <td>Male</td>
+                <td class="dept-level">Sales</td>
+                <td>350000</td>
+                <td>10-03-2023</td>
+                <td>
+                    <img id="1" onclick="remove(this)" src="../assets/icons/delete-black-18dp.svg" alt="delete">
+                    <img id="2" onclick="update(this)" src="../assets/icons/create-black-18dp.svg" alt="edit">
+                </td>
+            </tr>
+            <tr>
+                <td><img class="profile" src="../assets/profile-images/Ellipse -1.png" alt="profilePic"></td>
+                <td>Sanskriti</td>
+                <td>Female</td>
+                <td class="dept-level">Hr</td>
+                <td>450000</td>
+                <td>15-03-2023</td>
+                <td>
+                    <img id="1" onclick="remove(this)" src="../assets/icons/delete-black-18dp.svg" alt="delete">
+                    <img id="2" onclick="update(this)" src="../assets/icons/create-black-18dp.svg" alt="edit">
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
-</html>
+</html> 
