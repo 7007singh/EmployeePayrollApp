@@ -13,26 +13,29 @@ const createInnerHtml = () => {
     <th>Start Date</th>
     <th>Action</th>
 </tr>`;
-    let employeeData = createEmployeePayrollJSON()[1];
-    let htmlContent = `${headerContent}
-<tr>
-    <td><img class="profile" src="${employeeData._profilePic}"></td>
-    <td>${employeeData._name}</td>
-    <td>${employeeData._gender}</td>
-    <td>${getDeptHtml(employeeData._department)}</td>    
-    <td>${employeeData._salary}</td>
-    <td>${employeeData._startDate}</td>
-    <td>
-        <img id="1" onclick="remove(this)" src="../assets/icons/delete-black-18dp.svg" alt="delete">
-        <img id="2" onclick="update(this)" src="../assets/icons/create-black-18dp.svg" alt="edit">
-    </td>
-</tr>`;
+    let employeePayrollList = createEmployeePayrollJSON();
+    let htmlContent = `${headerContent}`;
+
+    for (employeeData of employeePayrollList) {
+        htmlContent= htmlContent+ `<tr>
+        <td><img class="profile" src="${employeeData._profilePic}"></td>
+        <td>${employeeData._name}</td>
+        <td>${employeeData._gender}</td>
+        <td>${getDeptHtml(employeeData._department)}</td>    
+        <td>${employeeData._salary}</td>
+        <td>${employeeData._startDate}</td>
+        <td>
+            <img id="1" onclick="remove(this)" src="../assets/icons/delete-black-18dp.svg" alt="delete">
+            <img id="2" onclick="update(this)" src="../assets/icons/create-black-18dp.svg" alt="edit">
+        </td>
+    </tr>`;
+    }
     document.querySelector('#table').innerHTML = htmlContent;
 }
 
 const getDeptHtml = (deptList) => {
     let deptHtml = '';
-    for(const dept of deptList){
+    for (const dept of deptList) {
         deptHtml = `${deptHtml} <div class="dept-lable">${dept}</div>`
     }
     return deptHtml;
