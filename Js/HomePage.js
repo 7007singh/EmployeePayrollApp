@@ -1,5 +1,8 @@
+let employeeList = [];
 window.addEventListener('DOMContentLoaded', function () {
+    employeeList = localStorage.getItem('EmployeePayrollList')?JSON.parse(localStorage.getItem('EmployeePayrollList')) : [];
     createInnerHtml();
+    this.document.querySelector('.count').textContent = employeeList.length; 
 });
 
 //templete literals ES6 feature
@@ -13,7 +16,7 @@ const createInnerHtml = () => {
     <th>Start Date</th>
     <th>Action</th>
 </tr>`;
-    let employeePayrollList = createEmployeePayrollJSON();
+    let employeePayrollList = employeeList;
     let htmlContent = `${headerContent}`;
 
     for (employeeData of employeePayrollList) {
