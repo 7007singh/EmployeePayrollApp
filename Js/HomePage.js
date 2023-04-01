@@ -29,7 +29,7 @@ const createInnerHtml = () => {
         <td>${employeeData._startDate}</td>
         <td>
             <img name="${employeeData._name}" onclick="remove(this)" src="../assets/icons/delete-black-18dp.svg" alt="delete">
-            <img onclick="update(this)" src="../assets/icons/create-black-18dp.svg" alt="edit">
+            <img name="${employeeData._name}" onclick="update(this)" src="../assets/icons/create-black-18dp.svg" alt="edit">
         </td>
     </tr>`;
     }
@@ -46,6 +46,13 @@ employeeList.splice(index, 1);
 localStorage.setItem("EmployeePayrollList", JSON.stringify(employeeList));
 document.querySelector(".count").textContent = employeeList.length;
 createInnerHtml();
+}
+
+const update = (node) => {
+    let empPayrollData = employeeList.find(empData => empData._name == node.name)
+    if(!empPayrollData) return;
+    localStorage.setItem('editEmp', JSON.stringify(empPayrollData))
+    window.location.replace(site_properties.add_emp_payroll_page);
 }
 
 const getDeptHtml = (deptList) => {
